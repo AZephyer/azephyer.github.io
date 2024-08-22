@@ -8,33 +8,35 @@
 /* General styles */
 body {
     font-family: Cambria, "Times New Roman", Times, serif;
-    background-color: #F4F4F2;
-    color: #4C4C4C;
-    line-height: 1.6;
-    padding-top: 50px; /* Adjust padding to ensure content is not hidden behind the header */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #F8F8F8; /* Light, warm background for a calming effect */
+    color: #333333; /* Slightly darker text color for contrast */
+    line-height: 1.7;
+    padding-top: 70px; /* Increased padding to ensure content is not hidden behind the header */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
+/* Header styling */
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #4C6A5A;
+    background-color: #2F4F4F; /* Darker green-gray for a professional look */
     color: white;
     text-align: left;
-    padding: 20px 20px; /* Reduced padding to shrink the header */
+    padding: 15px 20px; /* Slightly reduced padding */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 60px; /* Set a fixed height to minimize the header size */
+    height: 65px; /* Set a fixed height for a balanced header */
 }
 
 header h1 {
     margin: 0;
     display: inline-block;
-    font-size: 30px; /* Adjusted font size to fit within the reduced header height */
-    line-height: 40px; /* Align text vertically within the header */
+    font-size: 28px; /* Adjusted font size */
+    line-height: 45px; /* Align text vertically within the header */
+    font-weight: 600; /* Added a bolder weight for emphasis */
 }
 
 nav ul {
@@ -47,24 +49,29 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #F0E68C; /* Light khaki for a calming contrast */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #FFD700; /* Goldenrod color for hover effect */
 }
 
+/* Main content styling */
 main {
-    padding: 80px 30px 30px 30px;
-    max-width: 800px;
+    padding: 90px 40px 40px 40px; /* Adjusted padding for more breathing room */
+    max-width: 900px;
     margin: 0 auto;
-    min-height: calc(100vh - 65px); /* Ensure the main content area pushes the page to scroll */
+    min-height: calc(100vh - 70px);
+    background-color: #FFF; /* White background for main content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for content area */
+    border-radius: 10px; /* Rounded corners for a modern look */
 }
 
 /* Table styles */
@@ -72,23 +79,27 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: #FFF; /* White table background for contrast */
+    border-radius: 5px; /* Slight rounding */
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 table, th, td {
-    border: 1px solid #4C6A5A;
+    border: 1px solid #2F4F4F;
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
 thead {
-    background-color: #4C6A5A;
+    background-color: #2F4F4F;
     color: white;
 }
 
-/* Improved Spacing for Resources & Blog */
+/* Enhanced Spacing for Resources & Blog */
 .category-filters {
     margin-bottom: 30px;
     text-align: center;
@@ -102,17 +113,26 @@ thead {
     margin-bottom: 30px;
     padding: 15px;
     border: 1px solid #DDD;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #FAFAFA; /* Soft background for content items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.content-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
 h2 {
-    border-bottom: 2px solid #4C6A5A;
+    border-bottom: 2px solid #2F4F4F;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    font-weight: 700; /* Bold weight for h2 headings */
 }
 
 h3 {
     margin-top: 0;
+    font-weight: 600; /* Slightly bold for h3 */
 }
 
 .content-item p {
@@ -121,7 +141,7 @@ h3 {
 
 button {
     width: 100%;
-    background-color: #4C6A5A;
+    background-color: #2F4F4F;
     color: white;
     padding: 10px;
     border: none;
@@ -130,22 +150,38 @@ button {
     text-align: left;
     margin-bottom: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 button:hover {
     background-color: #3B5544;
 }
 
+/* Service item styles */
 .service-item {
     margin-bottom: 20px;
 }
 
 .service-details {
     display: none;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #DDD;
     border-radius: 5px;
     margin-top: 10px;
+    background-color: #FFF5EE; /* Light peach background for service details */
+}
+
+/* About page photo styling */
+#about-photo {
+    max-width: 200px; /* Adjusted size for balance */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #2F4F4F; /* Darker border for emphasis */
+    border-radius: 10px; /* Increased border-radius for a modern look */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Media Queries for Mobile Devices */
@@ -153,13 +189,13 @@ button:hover {
     header {
         text-align: center;
         padding: 10px;
-        height: auto; /* Auto height for responsive adjustment */
+        height: auto;
     }
 
     header h1 {
         display: block;
         margin-bottom: 10px;
-        line-height: normal; /* Reset line-height for mobile */
+        line-height: normal;
     }
 
     nav ul {
@@ -195,5 +231,9 @@ button:hover {
 
     .category-filters {
         margin-bottom: 20px;
+    }
+
+    #about-photo {
+        max-width: 150px; /* Smaller size for mobile screens */
     }
 }
