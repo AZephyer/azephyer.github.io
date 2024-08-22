@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>The Introspective Mediator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="scheduling.html">Scheduling</a></li>
+                <li><a href="resources.html">Resources & Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Me</h2>
+        <form action="submit-contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pronouns">Preferred Pronouns:</label>
+            <input type="text" id="pronouns" name="pronouns">
+
+            <label for="service">Service Interested In:</label>
+            <select id="service" name="service" required>
+                <option value="Postpartum Phase Reflection">Postpartum Phase Reflection</option>
+                <option value="Parent & Child Relationships">Parent & Child Relationships</option>
+                <option value="Boundary Setting and Maintenance">Boundary Setting and Maintenance</option>
+                <option value="Goal Guidance">Goal Guidance</option>
+                <option value="Intimate Relationship Conflict Resolution">Intimate Relationship Conflict Resolution</option>
+                <option value="Navigating the 'Urban Indigenous Experience'">Navigating the "Urban Indigenous Experience"</option>
+                <option value="Other">Other (please specify in message)</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+</body>
+</html>

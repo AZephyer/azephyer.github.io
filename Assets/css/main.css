@@ -1,0 +1,199 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Cambria, "Times New Roman", Times, serif;
+    background-color: #F4F4F2;
+    color: #4C4C4C;
+    line-height: 1.6;
+    padding-top: 50px; /* Adjust padding to ensure content is not hidden behind the header */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #4C6A5A;
+    color: white;
+    text-align: left;
+    padding: 20px 20px; /* Reduced padding to shrink the header */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Set a fixed height to minimize the header size */
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+    font-size: 30px; /* Adjusted font size to fit within the reduced header height */
+    line-height: 40px; /* Align text vertically within the header */
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 80px 30px 30px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: calc(100vh - 65px); /* Ensure the main content area pushes the page to scroll */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #4C6A5A;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #4C6A5A;
+    color: white;
+}
+
+/* Improved Spacing for Resources & Blog */
+.category-filters {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content-container {
+    margin-bottom: 40px;
+}
+
+.content-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #4C6A5A;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.content-item p {
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    background-color: #4C6A5A;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #3B5544;
+}
+
+.service-item {
+    margin-bottom: 20px;
+}
+
+.service-details {
+    display: none;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 10px;
+        height: auto; /* Auto height for responsive adjustment */
+    }
+
+    header h1 {
+        display: block;
+        margin-bottom: 10px;
+        line-height: normal; /* Reset line-height for mobile */
+    }
+
+    nav ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    table, th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .content-item {
+        padding: 10px;
+    }
+
+    .category-filters {
+        margin-bottom: 20px;
+    }
+}

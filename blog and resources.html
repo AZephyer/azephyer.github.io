@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Blog - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="Assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>The Introspective Mediator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="scheduling.html">Scheduling</a></li>
+                <li><a href="resources.html">Resources & Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Browse by Category</h2>
+        <div class="category-filters">
+            <button onclick="filterContent('all')">All</button>
+            <button onclick="filterContent('introspection')">Introspection</button>
+            <button onclick="filterContent('personal-development')">Personal Development</button>
+            <button onclick="filterContent('parenting')">Parenting</button>
+            <button onclick="filterContent('relationships')">Relationships</button>
+            <button onclick="filterContent('guides')">Guides</button>
+            <button onclick="filterContent('checklists')">Checklists</button>
+            <button onclick="filterContent('tips')">Tips</button>
+        </div>
+
+        <h2>Blog</h2>
+        <div class="content-container">
+            <div class="content-item introspection">
+                <h3><a href="why-im-not-a-life-coach.html">Why I'm Not a Life Coach</a></h3>
+                <p>When people hear the term "life coach," they often think of someone who provides advice, motivation, and guidance on how to achieve personal or professional goals. While this approach works for many, it doesn't fully capture the essence of what I do, which is why I prefer the title of "Mediator." <a href="why-im-not-a-life-coach.html">Read More</a></p>
+                <p><strong>Date:</strong> August 21, 2024</p>
+            </div>
+            <!-- Add more blog posts here with appropriate classes for filtering and include the date -->
+        </div>
+
+        <h2>Resources</h2>
+        <div class="content-container">
+            <div class="content-item guides">
+                <h3><a href="meditation-guide.pdf" download>Meditation Guide for Beginners</a></h3>
+                <p>A simple guide to help you start a meditation practice.</p>
+            </div>
+            <div class="content-item checklists">
+                <h3><a href="postpartum-support.pdf" download>Postpartum Support Checklist</a></h3>
+                <p>A checklist of resources and support options for new mothers.</p>
+            </div>
+            <div class="content-item tips">
+                <h3><a href="boundary-setting-tips.pdf" download>Boundary Setting Tips</a></h3>
+                <p>Practical advice on setting and maintaining healthy boundaries.</p>
+            </div>
+            <!-- Add more resources here with appropriate classes for filtering -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+</body>
+</html>
