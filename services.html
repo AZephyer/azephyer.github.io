@@ -26,71 +26,65 @@
     <main>
         <h2>What I Offer</h2>
 
-        <div class="service-item">
-            <h3>Postpartum Phase Reflection</h3>
-            <p>This service explores your experiences during the postpartum phase, providing support and strategies for navigating this period.</p>
-            <button onclick="toggleServiceDetails('postpartum')">Learn More</button>
-            <div id="postpartum" class="service-details">
-                <p>We focus on emotional well-being, self-care practices, and finding balance during the postpartum period.</p>
-                <button onclick="toggleServiceDetails('postpartum')">Collapse</button>
-            </div>
-        </div>
-
-        <div class="service-item">
+        <div class="service-item" data-tags="parenting,well-being">
             <h3>Parent & Child Relationships</h3>
             <p>Strengthen your relationship with your child, improve communication, and address conflicts or challenges.</p>
             <button onclick="toggleServiceDetails('parent-child')">Learn More</button>
-            <div id="parent-child" class="service-details">
-                <p>This service explores parenting strategies that foster a healthy, supportive family dynamic.</p>
+            <div id="parent-child" class="service-details" style="display:none;">
+                <p>Gain insights into effective parenting techniques that help build a strong and understanding relationship with your child. This service is tailored to assist parents in nurturing a loving and respectful family environment.</p>
                 <button onclick="toggleServiceDetails('parent-child')">Collapse</button>
             </div>
         </div>
 
-        <div class="service-item">
+        <div class="service-item" data-tags="boundaries,conflict resolution">
             <h3>Boundary Setting and Maintenance</h3>
             <p>Setting and maintaining healthy boundaries is crucial for well-being. This service helps you establish and maintain them.</p>
             <button onclick="toggleServiceDetails('boundaries')">Learn More</button>
-            <div id="boundaries" class="service-details">
-                <p>We work together to identify areas where boundaries are needed, and I provide support in maintaining them over time.</p>
+            <div id="boundaries" class="service-details" style="display:none;">
+                <p>Learn how to effectively set personal and professional boundaries that foster respect and understanding in all your relationships. This guidance is crucial for maintaining your mental health and ensuring healthy interactions.</p>
                 <button onclick="toggleServiceDetails('boundaries')">Collapse</button>
             </div>
         </div>
 
-        <div class="service-item">
+        <div class="service-item" data-tags="goal-setting">
             <h3>Goal Guidance</h3>
             <p>Whether personal or professional, this service provides the guidance and support needed to achieve your goals.</p>
             <button onclick="toggleServiceDetails('goal-guidance')">Learn More</button>
-            <div id="goal-guidance" class="service-details">
-                <p>We focus on setting realistic, achievable goals and creating actionable plans to reach them.</p>
+            <div id="goal-guidance" class="service-details" style="display:none;">
+                <p>Our goal guidance service helps you define clear, attainable objectives and develop a structured plan to achieve them. This process is tailored to your personal aspirations and professional career goals.</p>
                 <button onclick="toggleServiceDetails('goal-guidance')">Collapse</button>
             </div>
         </div>
 
-        <div class="service-item">
+        <div class="service-item" data-tags="conflict-resolution">
             <h3>Intimate Relationship Conflict Resolution</h3>
             <p>This service offers strategies and mediation to resolve conflicts in intimate relationships.</p>
             <button onclick="toggleServiceDetails('relationship-conflict')">Learn More</button>
-            <div id="relationship-conflict" class="service-details">
-                <p>We work on improving communication, rebuilding trust, and finding mutually agreeable solutions to conflicts.</p>
+            <div id="relationship-conflict" class="service-details" style="display:none;">
+                <p>Focus on resolving interpersonal conflicts with effective communication strategies and mediation techniques that promote understanding and reconciliation.</p>
                 <button onclick="toggleServiceDetails('relationship-conflict')">Collapse</button>
             </div>
         </div>
 
-        <div class="service-item">
+        <div class="service-item" data-tags="cultural-navigation">
             <h3>Navigating the "Urban Indigenous Experience"</h3>
             <p>This service is tailored for those navigating the urban Indigenous experience, exploring identity and community.</p>
             <button onclick="toggleServiceDetails('urban-indigenous')">Learn More</button>
-            <div id="urban-indigenous" class="service-details">
-                <p>We delve into the unique challenges faced by Indigenous individuals in urban settings.</p>
-                <button onclick="toggleServiceDetails('urban-indigenous')">Collapse</button>
-            </div>
+            <div id="urban-indigenous" class="service-details" style="display:none;">
+                <p>Designed to support urban Indigenous individuals, this service helps explore and affirm cultural identity, connect with community resources, and address unique challenges faced in urban settings.</p>
+                <button onclick="toggleServiceDetails('urban-indigenous')">Collapse</button            </div>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleServiceDetails(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
-
-
