@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Portal - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/staff.css">
+    <script src="Assets/js/staff.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>The Introspective Mediator - Staff Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="staff_portal.html">Home</a></li>
+                <li><a href="client_management.html">Client Management</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="calendar.html">Appointment Calendar</a></li>
+                <li><a href="mediator_assignment.html">Mediator Assignment</a></li>
+                <li><a href="2fa_verification.html">Two-Factor Authentication</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to Your Staff Portal, Jasmine!</h2>
+        <p>Today's Date: <span id="todays-date"></span></p>
+
+        <section class="dashboard">
+            <h3>To-Do List</h3>
+            <ul id="to-do-list">
+                <li>Review client session notes</li>
+                <li>Prepare materials for upcoming sessions</li>
+                <li>Update methodology techniques</li>
+                <li>Check payments and update records</li>
+            </ul>
+            <button id="add-task-btn">Add Task</button>
+        </section>
+
+        <section class="calendar">
+            <h3>Upcoming Appointments</h3>
+            <iframe src="calendar.html" style="width:100%; height:400px;"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Display today's date
+        document.getElementById('todays-date').textContent = new Date().toLocaleDateString();
+
+        // To-Do List functionality
+        document.getElementById('add-task-btn').addEventListener('click', function() {
+            const newTask = prompt('Enter a new task:');
+            if (newTask) {
+                const li = document.createElement('li');
+                li.textContent = newTask;
+                document.getElementById('to-do-list').appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>
