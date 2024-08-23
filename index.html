@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Introspective Mediator</title>
     <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="Assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>The Introspective Mediator</h1>
+        <h1><a href="index.html">The Introspective Mediator</a></h1>
+        <button class="hamburger">&#9776;</button>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html">About</a>
+                    <ul class="submenu">
+                        <li><a href="about.html#bio">Bio</a></li>
+                        <li><a href="about.html#philosophy">Philosophy</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <ul class="submenu">
+                        <li><a href="services.html#parenting">Parent & Child Relationships</a></li>
+                        <li><a href="services.html#boundaries">Boundary Setting and Maintenance</a></li>
+                        <li><a href="services.html#goals">Goal Guidance</a></li>
+                    </ul>
+                </li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html">Scheduling</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -24,11 +39,7 @@
     </header>
 
     <main>
-        <h2>Welcome to The Introspective Mediator</h2>
-        <p>Welcome to The Introspective Mediator, where empathy, integrity, and inclusivity form the cornerstone of my practice. My name is Jasmine Lapratt-McLennon, a Social Service Worker (SSW) committed to helping you navigate personal and professional challenges through guided self-mediation.</p>
-        <p>In today’s fast-paced world, virtual mediation offers a flexible, convenient way to engage in meaningful personal development. Whether you're seeking to resolve conflicts, strengthen relationships, or achieve personal goals, I am here to support you on your journey.</p>
-        <p>Explore my services to see how I can assist you in your personal growth and conflict resolution. Together, we can create a path forward that is aligned with your values and aspirations.</p>
-        <p>Feel free to browse the site for resources, learn more about the services offered, or schedule a consultation to begin your journey.</p>
+        <!-- Main content here -->
     </main>
 
     <footer>
