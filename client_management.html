@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/staff.css">
+    <script src="Assets/js/staff.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Client Management</h1>
+        <nav>
+            <ul>
+                <li><a href="staff_portal.html">Home</a></li>
+                <li><a href="client_management.html" class="active">Client Management</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="calendar.html">Appointment Calendar</a></li>
+                <li><a href="mediator_assignment.html">Mediator Assignment</a></li>
+                <li><a href="2fa_verification.html">Two-Factor Authentication</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Manage Clients</h2>
+
+        <!-- Client Search Section -->
+        <section class="client-search">
+            <h3>Search Clients</h3>
+            <input type="text" id="client-search" placeholder="Search by Client Name or Number">
+            <button id="search-btn">Search</button>
+        </section>
+
+        <!-- Client List Section -->
+        <section class="client-list">
+            <h3>Client List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Client Number</th>
+                        <th>Last Session Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="client-table">
+                    <!-- Dynamic rows will be added here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Client Details Section -->
+        <section class="client-details">
+            <h3>Client Details</h3>
+            <div id="client-info">
+                <p>Select a client to view details.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example client data
+        const clients = [
+            { name: 'John Doe', number: '001', lastSession: '2024-09-01' },
+            { name: 'Jane Smith', number: '002', lastSession: '2024-08-25' },
+            // More client data can be added here
+        ];
+
+        // Populate client table with data
+        const clientTable = document.getElementById('client-table');
+        clients.forEach(client => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${client.name}</td>
+                <td>${client.number}</td>
+                <td>${client.lastSession}</td>
+                <td><button onclick="viewClientDetails('${client.number}')">View Details</button></td>
+            `;
+            clientTable.appendChild(row);
+        });
+
+        // Display client details
+        function viewClientDetails(clientNumber) {
+            const client = clients.find(c => c.number === clientNumber);
+            const clientInfo = document.getElementById('client-info');
+            if (client) {
+                clientInfo.innerHTML = `
+                    <h4>${client.name} (Client #${client.number})</h4>
+                    <p><strong>Last Session:</strong> ${client.lastSession}</p>
+                    <button onclick="uploadDocument('${client.number}')">Upload Document</button>
+                `;
+            } else {
+                clientInfo.innerHTML = `<p>Client not found.</p>`;
+            }
+        }
+
+        // Function to handle document uploads (this would need to be connected to a backend)
+        function uploadDocument(clientNumber) {
+            alert(`Upload document for Client #${clientNumber}`);
+        }
+
+        // Implement client search functionality
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const searchValue = document.getElementById('client-search').value.toLowerCase();
+            const filteredClients = clients.filter(client => 
+                client.name.toLowerCase().includes(searchValue) || 
+                client.number.includes(searchValue)
+            );
+            
+            clientTable.innerHTML = '';
+            filteredClients.forEach(client => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${client.name}</td>
+                    <td>${client.number}</td>
+                    <td>${client.lastSession}</td>
+                    <td><button onclick="viewClientDetails('${client.number}')">View Details</button></td>
+                `;
+                clientTable.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>
