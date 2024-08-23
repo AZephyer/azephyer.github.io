@@ -17,15 +17,15 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html">Scheduling</a></li>
-                <li><a href="resources.html">Resources & Blog</a></li>
+                <li><a href="resources.html" class="active">Resources & Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Browse by Category</h2>
-        <div class="category-filters">
+        <section class="category-filters">
             <button onclick="filterContent('all')">All</button>
             <button onclick="filterContent('introspection')">Introspection</button>
             <button onclick="filterContent('personal-development')">Personal Development</button>
@@ -34,38 +34,84 @@
             <button onclick="filterContent('guides')">Guides</button>
             <button onclick="filterContent('checklists')">Checklists</button>
             <button onclick="filterContent('tips')">Tips</button>
-        </div>
+        </section>
 
-        <h2>Blog</h2>
-        <div class="content-container">
-            <div class="content-item introspection">
-                <h3><a href="why-im-not-a-life-coach.html">Why I'm Not a Life Coach</a></h3>
-                <p>When people hear the term "life coach," they often think of someone who provides advice, motivation, and guidance on how to achieve personal or professional goals. While this approach works for many, it doesn't fully capture the essence of what I do, which is why I prefer the title of "Mediator." <a href="why-im-not-a-life-coach.html">Read More</a></p>
-                <p><strong>Date:</strong> August 21, 2024</p>
+        <section class="blog-section">
+            <h2>Blog</h2>
+            <div class="content-container">
+                <div class="content-item introspection">
+                    <h3><a href="effective-introspection.html">Effective Introspection: A Path to Deeper Self-Knowledge</a></h3>
+                    <p>Introspection, the examination of one's own conscious thoughts and feelings, is discussed in relation to self-awareness and personal growth. <a href="effective-introspection.html">Read More</a></p>
+                    <p><strong>Date:</strong> September 15, 2024</p>
+                </div>
+                <div class="content-item introspection">
+                    <h3><a href="why-im-not-a-life-coach.html">Why I'm Not a Life Coach</a></h3>
+                    <p>Explore why the title "Mediator" better represents my role in helping individuals navigate their inner lives. <a href="why-im-not-a-life-coach.html">Read More</a></p>
+                    <p><strong>Date:</strong> August 21, 2024</p>
+                </div>
             </div>
-            <!-- Add more blog posts here with appropriate classes for filtering and include the date -->
-        </div>
+        </section>
 
-        <h2>Resources</h2>
-        <div class="content-container">
-            <div class="content-item guides">
-                <h3><a href="meditation-guide.pdf" download>Meditation Guide for Beginners</a></h3>
-                <p>A simple guide to help you start a meditation practice.</p>
+        <section class="resources-section">
+            <h2>Resources</h2>
+            <div class="content-container">
+                <div class="content-item guides">
+                    <h3><a href="https://www.linkedin.com/pulse/primary-principle-self-mediation-when-you-want-golub-mba-pcc" target="_blank">The Primary Principle of Self-Mediation</a></h3>
+                    <p>An insightful article on how self-mediation can help individuals achieve personal growth. <em>Author: Jay Golub</em> <strong>Date:</strong> September 15, 2024</p>
+                </div>
+                <div class="content-item checklists">
+                    <h3><a href="https://www.cbc.ca/news/canada/marketplace-life-coach-1.6364745" target="_blank">The Truth About Life Coaching</a></h3>
+                    <p>Marketplace investigates the life coaching industry, uncovering some important truths. <em>Author: CBC Marketplace</em> <strong>Date:</strong> February 25, 2024</p>
+                </div>
+                <div class="content-item tips">
+                    <h3><a href="https://www.ocswssw.org/public/about-rsws-and-rssws/" target="_blank">What Does a Social Service Worker Do?</a></h3>
+                    <p>An overview of the roles and responsibilities of a Social Service Worker. <em>Author: Ontario College of Social Workers and Social Service Workers</em> <strong>Date:</strong> April 1, 2024</p>
+                </div>
             </div>
-            <div class="content-item checklists">
-                <h3><a href="postpartum-support.pdf" download>Postpartum Support Checklist</a></h3>
-                <p>A checklist of resources and support options for new mothers.</p>
+        </section>
+
+        <section class="materials-section">
+            <h2>Materials</h2>
+            <div class="content-container">
+                <div class="content-item">
+                    <h3><a href="daily-self-check-in.pdf" download>Daily Self-Check In Worksheet</a></h3>
+                    <p>Keep track of your daily emotional wellness and activities.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="mindfulness-walk.pdf" download>Mindfulness Walk Activity</a></h3>
+                    <p>A guided activity to help you practice mindfulness while walking.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="budget-planner-template.pdf" download>Budget Planner Templates</a></h3>
+                    <p>Downloadable budget templates to help you manage your finances effectively.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="activities-at-home.pdf" download>The Littles and I: Activities at Home</a></h3>
+                    <p>A list of fun and engaging activities you can do with your children at home.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="how-did-i-parent-today.pdf" download>How Did I Parent Today?</a></h3>
+                    <p>A reflective worksheet to help you assess and improve your parenting practices.</p>
+                </div>
             </div>
-            <div class="content-item tips">
-                <h3><a href="boundary-setting-tips.pdf" download>Boundary Setting Tips</a></h3>
-                <p>Practical advice on setting and maintaining healthy boundaries.</p>
-            </div>
-            <!-- Add more resources here with appropriate classes for filtering -->
-        </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function filterContent(category) {
+            const items = document.querySelectorAll('.content-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
