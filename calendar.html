@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Calendar - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/staff.css">
+    <script src="Assets/js/staff.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Appointment Calendar</h1>
+        <nav>
+            <ul>
+                <li><a href="staff_portal.html">Home</a></li>
+                <li><a href="client_management.html">Client Management</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="calendar.html" class="active">Appointment Calendar</a></li>
+                <li><a href="mediator_assignment.html">Mediator Assignment</a></li>
+                <li><a href="2fa_verification.html">Two-Factor Authentication</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Today's Date: <span id="current-date"></span></h2>
+        
+        <h2>Appointment Calendar</h2>
+        <div id="calendar-container">
+            <!-- Calendar content goes here -->
+            <p>Loading calendar...</p>
+        </div>
+
+        <section class="calendar-controls">
+            <button onclick="prevMonth()">Previous Month</button>
+            <button onclick="nextMonth()">Next Month</button>
+        </section>
+
+        <section class="appointment-details">
+            <h3>Upcoming Appointments</h3>
+            <ul id="appointment-list">
+                <li>No appointments scheduled.</li>
+            </ul>
+        </section>
+
+        <section class="add-appointment">
+            <h3>Add New Appointment</h3>
+            <form id="add-appointment-form">
+                <label for="appointment-date">Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" name="client-name" required>
+
+                <label for="appointment-notes">Notes:</label>
+                <textarea id="appointment-notes" name="appointment-notes"></textarea>
+
+                <button type="submit">Add Appointment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Display today's date
+            const today = new Date();
+            document.getElementById('current-date').textContent = today.toDateString();
+
+            // Load the calendar
+            loadCalendar(today);
+
+            // Load upcoming appointments
+            loadAppointments();
+
+            // Add event listener for adding appointments
+            document.getElementById('add-appointment-form').addEventListener('submit', addAppointment);
+        });
+
+        function loadCalendar(date) {
+            const calendarContainer = document.getElementById('calendar-container');
+            calendarContainer.innerHTML = '';
+
+            const month = date.getMonth();
+            const year = date.getFullYear();
+
+            const monthYearHeader = document.createElement('h3');
+            monthYearHeader.textContent = `${getMonthName(month)} ${year}`;
+            calendarContainer.appendChild(monthYearHeader);
+
+            const calendarGrid = document.createElement('table');
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const headerRow = document.createElement('tr');
+
+            days.forEach(day => {
+                const dayCell = document.createElement('th');
+                dayCell.textContent = day;
+                headerRow.appendChild(dayCell);
+            });
+
+            calendarGrid.appendChild(headerRow);
+
+            for (let i = 1; i <= 30; i++) {
+                const dayRow = document.createElement('tr');
+                const dayCell = document.createElement('td');
+                dayCell.textContent = i;
+                dayRow.appendChild(dayCell);
+                calendarGrid.appendChild(dayRow);
+            }
+
+            calendarContainer.appendChild(calendarGrid);
+        }
+
+        function loadAppointments() {
+            const appointmentList = document.getElementById('appointment-list');
+            appointmentList.innerHTML = '';
+
+            const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+
+            appointments.forEach(appointment => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${appointment.date} - ${appointment.time} with ${appointment.client}`;
+                appointmentList.appendChild(listItem);
+            });
+
+            if (appointments.length === 0) {
+                const noAppointments = document.createElement('li');
+                noAppointments.textContent = 'No appointments scheduled.';
+                appointmentList.appendChild(noAppointments);
+            }
+        }
+
+        function addAppointment(event) {
+            event.preventDefault();
+
+            const date = document.getElementById('appointment-date').value;
+            const time = document.getElementById('appointment-time').value;
+            const client = document.getElementById('client-name').value;
+            const notes = document.getElementById('appointment-notes').value;
+
+            const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            appointments.push({ date, time, client, notes });
+
+            localStorage.setItem('appointments', JSON.stringify(appointments));
+
+            loadAppointments();
+
+            alert('Appointment added successfully!');
+            document.getElementById('add-appointment-form').reset();
+        }
+
+        function prevMonth() {
+            alert('Previous month clicked!');
+        }
+
+        function nextMonth() {
+            alert('Next month clicked!');
+        }
+
+        function getMonthName(monthIndex) {
+            const monthNames = ['January', 'February', March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            return monthNames[monthIndex];
+        }
+    </script>
+</body>
+</html>
