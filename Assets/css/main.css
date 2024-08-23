@@ -7,7 +7,7 @@
 
 /* General styles */
 body {
-    font-family: Cambria, "Times New Roman", Times, serif;
+    font-family: Cambria, sans-serif;
     background-color: #F8F8F8; /* Light, warm background for a calming effect */
     color: #333333; /* Slightly darker text color for contrast */
     line-height: 1.7;
@@ -24,32 +24,31 @@ header {
     left: 0;
     background-color: #2F4F4F; /* Darker green-gray for a professional look */
     color: white;
-    text-align: left;
-    padding: 15px 20px; /* Slightly reduced padding */
+    padding: 15px 20px;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 65px; /* Set a fixed height for a balanced header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header h1 {
     margin: 0;
-    display: inline-block;
-    font-size: 28px; /* Adjusted font size */
-    line-height: 45px; /* Align text vertically within the header */
+    font-size: 24px; /* Adjusted font size */
     font-weight: 600; /* Added a bolder weight for emphasis */
 }
 
 nav ul {
     list-style: none;
-    display: inline-block;
-    margin-left: 20px;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
@@ -61,6 +60,43 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFD700; /* Goldenrod color for hover effect */
+}
+
+/* Dropdown menu styles */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2F4F4F;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #F0E68C;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* Main content styling */
@@ -173,7 +209,7 @@ button:hover {
 
 /* About page photo styling */
 #about-photo {
-    max-width: 200px; /* Adjusted size for balance */
+    max-width: 150px; /* Adjusted size for balance */
     width: 100%;
     height: auto;
     display: block;
@@ -196,17 +232,30 @@ button:hover {
         display: block;
         margin-bottom: 10px;
         line-height: normal;
+        text-align: left;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     nav ul {
-        display: block;
-        margin: 0;
-        padding: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
         text-align: center;
+        background-color: #2F4F4F;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
@@ -236,4 +285,17 @@ button:hover {
     #about-photo {
         max-width: 150px; /* Smaller size for mobile screens */
     }
+}
+
+/* JavaScript functionality for dropdowns and hamburger menu */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

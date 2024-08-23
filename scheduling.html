@@ -15,8 +15,9 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="scheduling.html">Scheduling</a></li>
+                <li><a href="scheduling.html" class="active">Scheduling</a></li>
                 <li><a href="resources.html">Resources</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -26,7 +27,8 @@
         <h2>Book a Consultation</h2>
         <p>Before the first session, every potential client must schedule a 15-30 minute consultation. This consultation helps determine if we are the right fit and if my services suit your needs. If not, I will try to offer alternatives that may be more suited.</p>
 
-        <form action="submit-consultation.php" method="POST">
+        <!-- Consultation Form -->
+        <form action="https://formspree.io/f/mzzpkdbp" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -58,9 +60,11 @@
 
         <h2>Scheduling Sessions</h2>
         <p>After completing the consultation, you'll receive a client number, which you'll need to schedule sessions. Please have this client number ready when booking.</p>
+        <p>If you are booking a Postpartum Support session, you do not need a consultation, and you can book your session directly.</p>
         <p>To schedule your sessions, please use the form below:</p>
 
-        <form action="submit-session.php" method="POST">
+        <!-- Session Scheduling Form -->
+        <form action="https://formspree.io/f/meojpeqq" method="POST">
             <label for="client-number">Client Number:</label>
             <input type="text" id="client-number" name="client-number" required>
 
