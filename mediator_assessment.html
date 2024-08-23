@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediator Self-Assessment - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/staff.css">
+    <script src="Assets/js/staff.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mediator Self-Assessment</h1>
+        <nav>
+            <ul>
+                <li><a href="staff_portal.html">Home</a></li>
+                <li><a href="client_management.html">Client Management</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="calendar.html">Appointment Calendar</a></li>
+                <li><a href="mediator_assignment.html">Mediator Assignment</a></li>
+                <li><a href="mediator_assessment.html" class="active">Mediator Self-Assessment</a></li>
+                <li><a href="2fa_verification.html">Two-Factor Authentication</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Mediator Self-Assessment</h2>
+
+        <section class="assessment-intro">
+            <p>This self-assessment is designed to help you reflect on your performance and identify areas for professional growth. It's a tool to ensure continuous improvement in your mediation practice.</p>
+        </section>
+
+        <section class="assessment-form">
+            <form id="mediator-assessment-form" action="https://formspree.io/f/mvgpvbgv" method="POST">
+                <div class="form-group">
+                    <label for="date">Date of Assessment:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="strengths">Strengths:</label>
+                    <textarea id="strengths" name="strengths" placeholder="What went well in your recent mediations?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="areas-for-growth">Areas for Growth:</label>
+                    <textarea id="areas-for-growth" name="areas-for-growth" placeholder="Where do you feel improvement is needed?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="training-needs">Training Needs:</label>
+                    <textarea id="training-needs" name="training-needs" placeholder="What additional training or resources could benefit your practice?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="self-care">Self-Care Practices:</label>
+                    <textarea id="self-care" name="self-care" placeholder="How are you taking care of your mental and emotional well-being?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">Goals for the Next Quarter:</label>
+                    <textarea id="goals" name="goals" placeholder="What are your goals for the upcoming months?"></textarea>
+                </div>
+
+                <button type="submit">Submit Assessment</button>
+            </form>
+        </section>
+
+        <section class="previous-assessments">
+            <h3>Previous Assessments</h3>
+            <p>Review your past assessments to track your progress.</p>
+            <ul id="assessment-list">
+                <!-- Previous assessments will be listed here -->
+                <li>No previous assessments found.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load previous assessments from localStorage or server
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPreviousAssessments();
+        });
+
+        function loadPreviousAssessments() {
+            const assessmentList = document.getElementById('assessment-list');
+            assessmentList.innerHTML = '';
+
+            const assessments = JSON.parse(localStorage.getItem('assessments')) || [];
+
+            assessments.forEach(assessment => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Assessment on ${assessment.date}: ${assessment.strengths.slice(0, 50)}...`;
+                assessmentList.appendChild(listItem);
+            });
+
+            if (assessments.length === 0) {
+                const noAssessments = document.createElement('li');
+                noAssessments.textContent = 'No previous assessments found.';
+                assessmentList.appendChild(noAssessments);
+            }
+        }
+
+        // Example: Saving assessments to localStorage (can be adapted for server-side)
+        document.getElementById('mediator-assessment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const date = document.getElementById('date').value;
+            const strengths = document.getElementById('strengths').value;
+            const areasForGrowth = document.getElementById('areas-for-growth').value;
+            const trainingNeeds = document.getElementById('training-needs').value;
+            const selfCare = document.getElementById('self-care').value;
+            const goals = document.getElementById('goals').value;
+
+            const assessments = JSON.parse(localStorage.getItem('assessments')) || [];
+            assessments.push({ date, strengths, areasForGrowth, trainingNeeds, selfCare, goals });
+
+            localStorage.setItem('assessments', JSON.stringify(assessments));
+
+            alert('Assessment submitted successfully!');
+            document.getElementById('mediator-assessment-form').reset();
+            loadPreviousAssessments();
+        });
+    </script>
+</body>
+      </html>
