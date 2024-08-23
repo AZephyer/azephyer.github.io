@@ -1,7 +1,7 @@
 # azephyer.github.io
 
 ## Description
-This repository hosts the website for **The Introspective Mediator**, a platform dedicated to providing self-mediation and personal growth services. The site is built with HTML, CSS, and JavaScript, and is published using GitHub Pages.
+This repository hosts the website for **The Introspective Mediator**, a platform dedicated to offering self-mediation and personal growth services. The website incorporates advanced functionalities like service detail toggling, comprehensive resource sections, and improved user accessibility. Built using HTML, CSS, and JavaScript, it is designed to provide a responsive and engaging user experience across various devices.
 
 ## Installation
 To set up this project locally, follow these steps:
@@ -19,13 +19,14 @@ To set up this project locally, follow these steps:
 To view the website locally, simply open the `index.html` file in your preferred web browser.
 
 ### Features
-- **Service Pages:** Detailed descriptions of services offered, with an interactive "Learn More" feature.
-- **Booking and Scheduling:** Functionality for clients to schedule consultations and sessions.
-- **FAQ Section:** A frequently asked questions page to assist users with common inquiries.
-- **Responsive Design:** Optimized for viewing on various devices.
+- **Service Pages:** Detailed descriptions of services offered, with interactive elements to explore more about each service.
+- **Resource & Blog Section:** Curated articles and resources with filters for categories such as Introspection and Personal Development.
+- **Booking and Scheduling:** Integrated functionality for clients to schedule consultations and sessions online.
+- **FAQ Section:** Expanded to address common queries about services, methodologies, and client concerns.
+- **Responsive Design:** Fully optimized for viewing on desktops, tablets, and mobile devices.
 
 ## Publishing with GitHub Pages
-This repository is set up to be hosted on GitHub Pages. Once you push your changes to the `main` branch, they will automatically be published at:
+This repository is configured to host the website using GitHub Pages, making updates live immediately upon pushing to the `main` branch.
 
 - **URL:** [https://azephyer.github.io](https://azephyer.github.io)
 
@@ -33,6 +34,5 @@ This repository is set up to be hosted on GitHub Pages. Once you push your chang
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Contact
-If you have any questions or need further assistance, feel free to reach out:
+For questions or further assistance, contact:
 - Email: introspectivemediator@gmail.com
-
