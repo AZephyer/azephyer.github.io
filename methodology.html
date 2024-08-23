@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediation Methodology - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/staff.css">
+    <script src="Assets/js/staff.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mediation Methodology</h1>
+        <nav>
+            <ul>
+                <li><a href="staff_portal.html">Home</a></li>
+                <li><a href="client_management.html">Client Management</a></li>
+                <li><a href="methodology.html" class="active">Methodology</a></li>
+                <li><a href="calendar.html">Appointment Calendar</a></li>
+                <li><a href="mediator_assignment.html">Mediator Assignment</a></li>
+                <li><a href="2fa_verification.html">Two-Factor Authentication</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>My Approach to Mediation</h2>
+        <p>In my practice, I integrate a variety of therapeutic approaches to support my clients effectively. Below are the key methodologies and techniques I utilize:</p>
+
+        <section class="methodology-section">
+            <h3>Cognitive Behavioral Therapy (CBT)</h3>
+            <p>CBT focuses on identifying and challenging negative thought patterns and behaviors. I use this approach to help clients develop healthier thinking and coping strategies.</p>
+            <button onclick="toggleMethodDetails('cbt-details')">Learn More</button>
+            <div id="cbt-details" class="method-details" style="display:none;">
+                <p>CBT is highly structured and goal-oriented. It involves working with clients to identify distorted thinking, evaluate its validity, and replace it with more accurate and positive thoughts. Techniques such as journaling, exposure therapy, and relaxation exercises are often used in conjunction with CBT.</p>
+                <button onclick="toggleMethodDetails('cbt-details')">Collapse</button>
+            </div>
+        </section>
+
+        <section class="methodology-section">
+            <h3>Dialectical Behavior Therapy (DBT)</h3>
+            <p>DBT is an evidence-based psychotherapy that is particularly effective for clients who struggle with emotional regulation. It combines cognitive-behavioral techniques with mindfulness practices.</p>
+            <button onclick="toggleMethodDetails('dbt-details')">Learn More</button>
+            <div id="dbt-details" class="method-details" style="display:none;">
+                <p>DBT focuses on four main areas: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. It helps clients build skills to manage intense emotions, reduce self-destructive behaviors, and improve relationships.</p>
+                <button onclick="toggleMethodDetails('dbt-details')">Collapse</button>
+            </div>
+        </section>
+
+        <section class="methodology-section">
+            <h3>Mindfulness-Based Stress Reduction (MBSR)</h3>
+            <p>MBSR is a structured program that teaches mindfulness practices to help manage stress, anxiety, pain, and illness. It is based on the work of Dr. Jon Kabat-Zinn.</p>
+            <button onclick="toggleMethodDetails('mbsr-details')">Learn More</button>
+            <div id="mbsr-details" class="method-details" style="display:none;">
+                <p>MBSR includes practices such as mindfulness meditation, body scanning, and mindful movement (e.g., yoga). These practices encourage clients to develop a greater awareness of the present moment, helping them to respond to stress more effectively.</p>
+                <button onclick="toggleMethodDetails('mbsr-details')">Collapse</button>
+            </div>
+        </section>
+
+        <section class="methodology-section">
+            <h3>Solution-Focused Brief Therapy (SFBT)</h3>
+            <p>SFBT is a goal-directed collaborative approach to psychotherapeutic change that is conducted through direct observation of clients' responses to a series of precisely constructed questions.</p>
+            <button onclick="toggleMethodDetails('sfbt-details')">Learn More</button>
+            <div id="sfbt-details" class="method-details" style="display:none;">
+                <p>SFBT focuses on what clients want to achieve through therapy rather than on the problem(s) that made them seek help. The approach focuses on the present and future and is centered on finding solutions rather than exploring past experiences.</p>
+                <button onclick="toggleMethodDetails('sfbt-details')">Collapse</button>
+            </div>
+        </section>
+
+        <section class="methodology-section">
+            <h3>Integrative Therapy</h3>
+            <p>Integrative therapy involves blending elements from different therapeutic approaches to create a customized approach that best suits the needs of the client.</p>
+            <button onclick="toggleMethodDetails('integrative-details')">Learn More</button>
+            <div id="integrative-details" class="method-details" style="display:none;">
+                <p>This approach is flexible and holistic, allowing me to tailor therapy to the specific issues and goals of each client. Techniques and tools from various modalities are integrated to address the whole person – emotionally, mentally, and physically.</p>
+                <button onclick="toggleMethodDetails('integrative-details')">Collapse</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMethodDetails(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
