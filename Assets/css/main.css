@@ -7,11 +7,11 @@
 
 /* General styles */
 body {
-    font-family: Cambria, sans-serif;
-    background-color: #F8F8F8; /* Light, warm background for a calming effect */
-    color: #333333; /* Slightly darker text color for contrast */
-    line-height: 1.7;
-    padding-top: 70px; /* Increased padding to ensure content is not hidden behind the header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAF9F6; /* Light cream background for a calming effect */
+    color: #4A4A4A; /* Darker gray text for better readability */
+    line-height: 1.8;
+    padding-top: 70px; /* Ensures content is not hidden behind the header */
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -22,12 +22,12 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #2F4F4F; /* Darker green-gray for a professional look */
+    background-color: #B2C4B8; /* Lighter sage green for a calming and modern look */
     color: white;
     padding: 15px 20px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 65px; /* Set a fixed height for a balanced header */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Slightly taller header for more presence */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,8 +35,8 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 24px; /* Adjusted font size */
-    font-weight: 600; /* Added a bolder weight for emphasis */
+    font-size: 26px; /* Slightly larger font for better visibility */
+    font-weight: 700; /* Bolded text for emphasis */
 }
 
 nav ul {
@@ -52,14 +52,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #F0E68C; /* Light khaki for a calming contrast */
+    color: #FFF8DC; /* Light beige for a soft contrast */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Goldenrod color for hover effect */
+    color: #FFD700; /* Golden color for hover effect */
 }
 
 /* Dropdown menu styles */
@@ -68,10 +68,11 @@ nav ul li ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2F4F4F;
+    background-color: #B2C4B8;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    border-radius: 5px;
 }
 
 nav ul li ul li {
@@ -94,20 +95,20 @@ nav ul li:hover ul {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #F0E68C;
+    background-color: #FFF8DC;
     margin: 4px 0;
     transition: 0.4s;
 }
 
 /* Main content styling */
 main {
-    padding: 90px 40px 40px 40px; /* Adjusted padding for more breathing room */
-    max-width: 900px;
+    padding: 100px 40px 40px 40px; /* Adjusted padding for more breathing room */
+    max-width: 1000px;
     margin: 0 auto;
     min-height: calc(100vh - 70px);
-    background-color: #FFF; /* White background for main content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for content area */
-    border-radius: 10px; /* Rounded corners for a modern look */
+    background-color: #FFFFFF; /* White background for main content */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for content area */
+    border-radius: 12px; /* Slightly more rounded corners for a modern look */
 }
 
 /* Table styles */
@@ -115,54 +116,54 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #FFF; /* White table background for contrast */
-    border-radius: 5px; /* Slight rounding */
+    background-color: #FFFFFF; /* White table background for contrast */
+    border-radius: 6px; /* Slight rounding */
     overflow: hidden;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 table, th, td {
-    border: 1px solid #2F4F4F;
+    border: 1px solid #B2C4B8;
 }
 
 th, td {
-    padding: 12px;
+    padding: 14px;
     text-align: left;
 }
 
 thead {
-    background-color: #2F4F4F;
+    background-color: #B2C4B8;
     color: white;
 }
 
 /* Enhanced Spacing for Resources & Blog */
 .category-filters {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
 .content-container {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .content-item {
-    margin-bottom: 30px;
-    padding: 15px;
+    margin-bottom: 35px;
+    padding: 20px;
     border: 1px solid #DDD;
-    border-radius: 10px;
-    background-color: #FAFAFA; /* Soft background for content items */
+    border-radius: 12px;
+    background-color: #FDFDFD; /* Slightly off-white background for content items */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .content-item:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: translateY(-6px); /* Slight lift effect on hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
 }
 
 h2 {
-    border-bottom: 2px solid #2F4F4F;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #B2C4B8;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
     font-weight: 700; /* Bold weight for h2 headings */
 }
 
@@ -172,65 +173,65 @@ h3 {
 }
 
 .content-item p {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 button {
     width: 100%;
-    background-color: #2F4F4F;
+    background-color: #B2C4B8;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     text-align: left;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin-bottom: 12px;
+    border-radius: 6px;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 button:hover {
-    background-color: #3B5544;
+    background-color: #98A889; /* Lighter green for hover */
 }
 
 /* Service item styles */
 .service-item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .service-details {
     display: none;
-    padding: 15px;
+    padding: 18px;
     border: 1px solid #DDD;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 6px;
+    margin-top: 12px;
     background-color: #FFF5EE; /* Light peach background for service details */
 }
 
 /* About page photo styling */
 #about-photo {
-    max-width: 150px; /* Adjusted size for balance */
+    max-width: 130px; /* Adjusted size for balance */
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid #2F4F4F; /* Darker border for emphasis */
-    border-radius: 10px; /* Increased border-radius for a modern look */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 3px solid #B2C4B8; /* Lighter border for emphasis */
+    border-radius: 12px; /* Increased border-radius for a modern look */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Subtle shadow */
 }
 
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 768px) {
     header {
         text-align: center;
-        padding: 10px;
+        padding: 12px;
         height: auto;
     }
 
     header h1 {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         line-height: normal;
         text-align: left;
     }
@@ -244,9 +245,9 @@ button:hover {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #2F4F4F;
+        background-color: #B2C4B8;
         position: absolute;
-        top: 65px;
+        top: 70px;
         left: 0;
         z-index: 999;
     }
@@ -256,40 +257,40 @@ button:hover {
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 12px 0;
     }
 
     main {
-        padding: 15px;
+        padding: 18px;
         max-width: 100%;
     }
 
     table, th, td {
-        padding: 8px;
-        font-size: 14px;
+        padding: 10px;
+        font-size: 15px;
     }
 
     button {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .content-item {
-        padding: 10px;
+        padding: 14px;
     }
 
     .category-filters {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     #about-photo {
-        max-width: 150px; /* Smaller size for mobile screens */
+        max-width: 130px; /* Smaller size for mobile screens */
     }
 }
 
 /* JavaScript functionality for dropdowns and hamburger menu */
 .hamburger.active div:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-6px, 8px);
 }
 
 .hamburger.active div:nth-child(2) {
@@ -297,5 +298,5 @@ button:hover {
 }
 
 .hamburger.active div:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
+    transform: rotate(45deg) translate(-6px, -8px);
+    }
