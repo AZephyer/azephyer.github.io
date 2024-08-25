@@ -71,7 +71,6 @@
             <h3>Previous Assessments</h3>
             <p>Review your past assessments to track your progress.</p>
             <ul id="assessment-list">
-                <!-- Previous assessments will be listed here -->
                 <li>No previous assessments found.</li>
             </ul>
         </section>
@@ -82,7 +81,6 @@
     </footer>
 
     <script>
-        // Load previous assessments from localStorage or server
         document.addEventListener('DOMContentLoaded', function() {
             loadPreviousAssessments();
         });
@@ -106,7 +104,6 @@
             }
         }
 
-        // Example: Saving assessments to localStorage (can be adapted for server-side)
         document.getElementById('mediator-assessment-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -128,4 +125,4 @@
         });
     </script>
 </body>
-      </html>
+</html>
