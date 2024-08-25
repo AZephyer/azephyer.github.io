@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheduling - The Introspective Mediator</title>
     <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="Assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Scheduling</h1>
+        <h1>The Introspective Mediator</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <ul>
+                        <li><a href="services.html#parent-child">Parent & Child Relationships</a></li>
+                        <li><a href="services.html#boundaries">Boundary Setting and Maintenance</a></li>
+                        <li><a href="services.html#goal-guidance">Goal Guidance</a></li>
+                        <li><a href="services.html#relationship-conflict">Intimate Relationship Conflict Resolution</a></li>
+                        <li><a href="services.html#urban-indigenous">Urban Indigenous Experience</a></li>
+                        <li><a href="services.html#postpartum-reflection">Postpartum Phase Reflection</a></li>
+                    </ul>
+                </li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html" class="active">Scheduling</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blogandresources.html">Resources & Blog</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff_portal.html" class="staff-login">Staff Log-In</a></li>
             </ul>
         </nav>
     </header>
@@ -89,5 +106,12 @@
     <footer>
         <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
