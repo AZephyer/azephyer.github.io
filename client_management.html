@@ -29,7 +29,7 @@
         <!-- Client Search Section -->
         <section class="client-search">
             <h3>Search Clients</h3>
-            <input type="text" id="client-search" placeholder="Search by Client Name or Number">
+            <input type="text" id="client-search" placeholder="Search by Client Name or Number" aria-label="Search by Client Name or Number">
             <button id="search-btn">Search</button>
         </section>
 
@@ -57,6 +57,21 @@
             <div id="client-info">
                 <p>Select a client to view details.</p>
             </div>
+        </section>
+
+        <!-- Client Action Section -->
+        <section class="client-actions">
+            <h3>Client Actions</h3>
+            <button onclick="addNewClient()">Add New Client</button>
+            <button onclick="editClientDetails()">Edit Client Details</button>
+        </section>
+
+        <!-- Additional Client Information -->
+        <section class="client-additional-info">
+            <h3>Client History</h3>
+            <p>View a client's session history, documents, and additional notes.</p>
+            <button onclick="viewClientHistory()">View History</button>
+            <button onclick="uploadDocument()">Upload Document</button>
         </section>
     </main>
 
@@ -100,11 +115,6 @@
             }
         }
 
-        // Function to handle document uploads (this would need to be connected to a backend)
-        function uploadDocument(clientNumber) {
-            alert(`Upload document for Client #${clientNumber}`);
-        }
-
         // Implement client search functionality
         document.getElementById('search-btn').addEventListener('click', function() {
             const searchValue = document.getElementById('client-search').value.toLowerCase();
@@ -125,6 +135,23 @@
                 clientTable.appendChild(row);
             });
         });
+
+        // Placeholder functions for additional actions
+        function addNewClient() {
+            alert('Functionality to add a new client will be implemented here.');
+        }
+
+        function editClientDetails() {
+            alert('Functionality to edit client details will be implemented here.');
+        }
+
+        function viewClientHistory() {
+            alert('Functionality to view client history will be implemented here.');
+        }
+
+        function uploadDocument(clientNumber) {
+            alert(`Upload document for Client #${clientNumber}`);
+        }
     </script>
 </body>
 </html>
