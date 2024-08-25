@@ -9,6 +9,11 @@
 <body>
     <header>
         <h1>Privacy Policy</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -16,8 +21,9 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html">Scheduling</a></li>
-                <li><a href="resources.html">Resources & Blog</a></li>
+                <li><a href="blogandresources.html">Resources & Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff_portal.html" class="staff-login">Staff Log-In</a></li>
             </ul>
         </nav>
     </header>
@@ -51,5 +57,12 @@
     <footer>
         <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
