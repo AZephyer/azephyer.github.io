@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - The Introspective Mediator</title>
+    <link rel="stylesheet" href="Assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Staff Login</h1>
+    </header>
+
+    <main>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // This is a simple check. Replace with your backend authentication logic.
+            if (username === 'admin' && password === 'password') {
+                window.location.href = 'staff_portal.html';
+            } else {
+                alert('Invalid login credentials');
+            }
+        }
+    </script>
+</body>
+</html>
