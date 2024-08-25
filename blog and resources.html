@@ -10,6 +10,11 @@
 <body>
     <header>
         <h1>The Introspective Mediator</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,9 +22,10 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html">Scheduling</a></li>
-                <li><a href="resourceandblog.html" class="active">Resources & Blog</a></li>
+                <li><a href="blogandresources.html" class="active">Resources & Blog</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff_portal.html" class="staff-login">Staff Log-In</a></li>
             </ul>
         </nav>
     </header>
@@ -49,6 +55,21 @@
                     <p>Explore why the title "Mediator" better represents my role in helping individuals navigate their inner lives. <a href="why-im-not-a-life-coach.html">Read More</a></p>
                     <p><strong>Date:</strong> August 21, 2024</p>
                 </div>
+                <div class="content-item personal-development">
+                    <h3><a href="personal-growth-strategies.html">Top Strategies for Personal Growth</a></h3>
+                    <p>Explore actionable strategies to enhance your personal development and achieve your goals. <a href="personal-growth-strategies.html">Read More</a></p>
+                    <p><strong>Date:</strong> October 5, 2024</p>
+                </div>
+                <div class="content-item parenting">
+                    <h3><a href="positive-parenting-tips.html">Positive Parenting: Tips for Building Strong Relationships</a></h3>
+                    <p>Learn effective parenting techniques to nurture and strengthen your relationship with your children. <a href="positive-parenting-tips.html">Read More</a></p>
+                    <p><strong>Date:</strong> October 15, 2024</p>
+                </div>
+                <div class="content-item relationships">
+                    <h3><a href="conflict-resolution.html">Conflict Resolution in Relationships: Best Practices</a></h3>
+                    <p>Discover ways to effectively manage and resolve conflicts within your relationships. <a href="conflict-resolution.html">Read More</a></p>
+                    <p><strong>Date:</strong> November 1, 2024</p>
+                </div>
             </div>
         </section>
 
@@ -74,8 +95,16 @@
             <h2>Materials</h2>
             <div class="content-container">
                 <div class="content-item">
-                    <h3><a href="daily-self-check-in.pdf" download>Daily Self-Check In Worksheet</a></h3>
+                    <h3><a href="Assets/materials/daily-self-check-in.pdf" download>Daily Self-Check In Worksheet</a></h3>
                     <p>Keep track of your daily emotional wellness and activities.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="Assets/materials/goal-setting-guide.pdf" download>Goal Setting Guide</a></h3>
+                    <p>A comprehensive guide to setting and achieving your personal goals.</p>
+                </div>
+                <div class="content-item">
+                    <h3><a href="Assets/materials/conflict-resolution-guide.pdf" download>Conflict Resolution Guide</a></h3>
+                    <p>Strategies and techniques for resolving conflicts effectively.</p>
                 </div>
             </div>
         </section>
@@ -84,5 +113,23 @@
     <footer>
         <p>&copy; 2024 Jasmine Lapratt-McLennon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+
+        function filterContent(category) {
+            const items = document.querySelectorAll('.content-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
