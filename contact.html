@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - The Introspective Mediator</title>
     <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="Assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
         <h1>The Introspective Mediator</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,13 +24,14 @@
                 <li><a href="scheduling.html">Scheduling</a></li>
                 <li><a href="resources.html">Resources & Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff_portal.html" class="staff-login">Staff Log-In</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h2>Contact Me</h2>
-        <form action="submit-contact.php" method="POST">
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
