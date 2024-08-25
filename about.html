@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - The Introspective Mediator</title>
     <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="Assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
         <h1>About Me</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -16,15 +22,16 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="scheduling.html">Scheduling</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li><a href="resources.html">Resources & Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff_portal.html" class="staff-login">Staff Log-In</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h2>Jasmine Lapratt-McLennon, SSW</h2>
-        <img src="Assets/images/about/about-me.jpg" alt="About Photo">
+        <img src="Assets/images/about/about-me.jpg" alt="About Photo" id="about-photo">
         <p>I am an Afro-Indigenous mother of twin toddlers with a passion for helping others through guided self-reflection. With a Social Service Worker diploma and certifications in ASIST, Mental Health First Aid, and Diversity and Inclusion Training, I bring a holistic and inclusive approach to mediation.</p>
         <p>My approach is based on the philosophy that true mediation is about centering you in your journey, not imposing my values upon you. Together, we will explore your thoughts, feelings, and goals to help you find the clarity you need.</p>
     </main>
